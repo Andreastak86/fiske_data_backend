@@ -92,7 +92,6 @@ def compute_summary() -> Summary:
         default=None,
     )
 
-    # mest vanlige art
     counts = {}
     for c in CATCHES:
         counts[c.species] = counts.get(c.species, 0) + 1
@@ -158,8 +157,6 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        # Legg til Vercel-domenet ditt her senere, f.eks:
-        # "https://fangstdashboard.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
